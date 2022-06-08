@@ -36,6 +36,11 @@ const router = createRouter({
       component: () => import('../views/FieldsView.vue')
     },
     {
+      path: '/fields/create',
+      name: 'fields.create',
+      component: () => import('../views/FieldCreateView.vue')
+    },
+    {
       path: '/fields/:id',
       name: 'fields.edit',
       component: () => import('../views/FieldEditView.vue')

@@ -6,7 +6,7 @@
                 <p class="mt-2 text-sm text-gray-700">Each subscriber can have any of the following fields linked to them. You are able to setup all the reusable fields. A subscriber then selects the fields they want to apply to themselves.</p>
             </div>
             <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-                <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:w-auto">Add a field</button>
+                <RouterLink :to="{name: 'fields.create'}" class="btn-primary">Add a field</RouterLink>
             </div>
         </div>
 
