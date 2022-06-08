@@ -46,7 +46,7 @@ export const useFieldsStore = defineStore({
     },
 
     reset() {
-      this.subscriber = {};
+      this.field = {};
     },
 
     resetErrors() {

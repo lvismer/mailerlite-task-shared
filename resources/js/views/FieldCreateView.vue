@@ -41,6 +41,7 @@ const { field, errors } = storeToRefs(fieldsStore);
 const route = useRoute();
 const router = useRouter();
 
+fieldsStore.reset();
 fieldsStore.resetErrors();
 
 const create = () => {
