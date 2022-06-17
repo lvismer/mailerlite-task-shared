@@ -9,8 +9,9 @@
                 Name
             </label>
             <div class="mt-1 rounded-md shadow-sm">
-                <input id="name" type="text" v-model="subscriber.name" required class="form-input w-full" />
+                <input id="name" type="text" v-model="subscriber.name" required class="form-input w-full" :class="{'error': errors.name}" />
             </div>
+            <span class="text-xs text-red-500" v-if="errors.name">{{ errors.name[0] }}</span>
         </div>
 
         <div class="mt-4">
@@ -18,8 +19,9 @@
                 Email
             </label>
             <div class="mt-1 rounded-md shadow-sm">
-                <input id="email" type="text" v-model="subscriber.email" required class="form-input w-full" />
+                <input id="email" type="text" v-model="subscriber.email" required class="form-input w-full" :class="{'error': errors.email}" />
             </div>
+            <span class="text-xs text-red-500" v-if="errors.email">{{ errors.email[0] }}</span>
         </div>
 
         <div class="mt-4">
@@ -27,7 +29,7 @@
                 Status
             </label>
             <div class="mt-1 rounded-md shadow-sm">
-                <select id="status" v-model="subscriber.status" required class="form-input w-full">
+                <select id="status" v-model="subscriber.status" required class="form-input w-full" :class="{'error': errors.status}">
                     <option value="active">Active</option>
                     <option value="unsubscribed">Unsubscribed</option>
                     <option value="junk">Junk</option>
@@ -35,6 +37,7 @@
                     <option value="unconfirmed">Unconfirmed</option>
                 </select>
             </div>
+            <span class="text-xs text-red-500" v-if="errors.status">{{ errors.status[0] }}</span>
         </div>
 
         <div class="mt-6 flex justify-between">
@@ -75,7 +78,7 @@ import NumberField from '@/components/fields/NumberField';
 import StringField from '@/components/fields/StringField';
 
 const subscribersStore = useSubscribersStore();
-const { subscriber } = storeToRefs(subscribersStore);
+const { subscriber, errors } = storeToRefs(subscribersStore);
 const route = useRoute();
 const router = useRouter();
 

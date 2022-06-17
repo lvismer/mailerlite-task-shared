@@ -1,6 +1,8 @@
-# MailerLite - Developer Task
+# Subscribers with shared fields
 
-This version of the developer task creates subscribers and creates separate fields. Each subscriber can then link the shared fields to themselves with values for the specific field. In this way the fields are shared and the same fields are accessible to all subscribers.
+A small application demonstrating the creation of subscribers and the creation of separate shared subscriber fields. Each subscriber can then link the shared fields to themselves with values for the specific field. In this way the fields are shared and the same fields are accessible to all subscribers.
+
+The application makes use of a Restful API to manage the subscribers and fields with a Vuejs frontend. Laravel Sanctum is used for authorization and Pinia is used as a frontend store.
 
 ## Installation
 
@@ -30,7 +32,7 @@ DB_PASSWORD=
 Set the `APP_URL` in the `.env` file if not using `php artisan serve`. The `APP_URL` needs to correspond to your domain.
 
 ```bash
-APP_URL=http://mailerlite-task.localhost
+APP_URL=http://subscribers-with-shared-fields.localhost
 ```
 
 Create the application key.
@@ -62,5 +64,5 @@ php artisan serve
 
 The default seeded user has the following credentials:
 
-* Email: ```admin@mailerlite.com```
+* Email: ```admin@example.com```
 * Password: ```admin```

@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen mx-auto text-neutral-900 flex flex-col justify-center py-12 sm:px-6 lg:px-8 max-w-xl">
-        <Logo class="h-8 mb-8" />
+        <Logo class="h-9 mb-8" />
 
         <div>
             <label for="email" class="block text-sm font-medium leading-5">
