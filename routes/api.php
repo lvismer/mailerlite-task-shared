@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('v1')->middleware('auth:sanctum')->group(function() {
+Route::prefix('v1')->middleware('auth:sanctum')->group(function () {
     Route::get('subscribers', [SubscriberController::class, 'index'])->name('subscribers.index');
     Route::get('subscribers/{subscriber}', [SubscriberController::class, 'show'])->name('subscribers.show');
     Route::post('subscribers', [SubscriberController::class, 'store'])->name('subscribers.store');

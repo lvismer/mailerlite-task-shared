@@ -23,7 +23,7 @@ class SubscriberFieldController extends Controller
 
         $subscriber->refresh();
 
-        return new FieldResource($subscriber->fields->first(function($item) use ($id) {
+        return new FieldResource($subscriber->fields->first(function ($item) use ($id) {
             return $item->id == $id;
         }));
     }

@@ -8,8 +8,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FieldRequest;
 use App\Http\Resources\FieldResource;
 use App\Models\Field;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class FieldController extends Controller
 {

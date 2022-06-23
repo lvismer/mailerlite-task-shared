@@ -5,7 +5,6 @@ namespace Tests\Api;
 use App\Models\Field;
 use App\Models\User;
 use Laravel\Sanctum\Sanctum;
-
 use function Pest\Laravel\delete;
 use function Pest\Laravel\postJson;
 use function Pest\Laravel\putJson;

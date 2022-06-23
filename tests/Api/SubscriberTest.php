@@ -6,7 +6,6 @@ use App\Models\Field;
 use App\Models\Subscriber;
 use App\Models\User;
 use Laravel\Sanctum\Sanctum;
-
 use function Pest\Laravel\delete;
 use function Pest\Laravel\get;
 use function Pest\Laravel\postJson;
