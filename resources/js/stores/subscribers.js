@@ -22,11 +22,11 @@ export const useSubscribersStore = defineStore({
     async fetch(id) {
       this.subscriber = { loading: true };
 
-      axios.get('/api/v1/subscribers/' + id).then(response => {
+      axios.get('/api/v1/subscribers/' + id + '/edit').then(response => {
         this.subscriber = response.data.data;
 
         if (this.subscriber.fields) {
-          // @toto - Check if we can use <component :is> with the Composition API.
+          // @todo - Check if we can use <component :is> with the Composition API.
           // Inject the Field vuejs component name for each field.
           this.subscriber.fields.forEach(field => {
             field.component = field.type[0].toUpperCase() + field.type.slice(1) + 'Field';

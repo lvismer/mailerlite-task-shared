@@ -39,12 +39,12 @@ class SubscriberController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Edit the specified resource.
      *
      * @param  int  $id
      * @return SubscriberResource
      */
-    public function show($id)
+    public function edit($id)
     {
         $subscriber = Subscriber::with('fields')->find($id);
 

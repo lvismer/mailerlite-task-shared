@@ -38,12 +38,12 @@ class FieldController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Edit the specified resource.
      *
      * @param  int  $id
      * @return FieldResource
      */
-    public function show($id)
+    public function edit($id)
     {
         return new FieldResource(Field::find($id));
     }

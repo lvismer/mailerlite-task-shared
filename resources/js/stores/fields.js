@@ -20,7 +20,7 @@ export const useFieldsStore = defineStore({
     },
 
     async fetch(id) {
-      axios.get('/api/v1/fields/' + id).then(response => {
+      axios.get('/api/v1/fields/' + id + '/edit').then(response => {
         this.field = response.data.data;
       });
     },
