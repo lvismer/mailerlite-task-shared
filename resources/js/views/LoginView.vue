@@ -38,7 +38,7 @@ import {storeToRefs} from 'pinia';
 import {useAuthStore} from '@/stores';
 import {useRouter} from 'vue-router';
 
-const form = reactive({ email: 'admin@mailerlite.com', password: 'admin' });
+const form = reactive({ email: 'admin@example.com', password: 'admin' });
 const authStore = useAuthStore();
 const { errors } = storeToRefs(authStore);
 const router = useRouter();
